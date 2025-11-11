@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    
+</head>
+<body>
+    <!-- estrutura do cabecalho -->
+    <header class="header">
+        <span class="material-symbols-outlined icon">home</span>
+        <div class="cart" id="cart">
+            <span class="material-symbols-outlined icon">shopping_cart_checkout</span>
+            <span id="cart-count" class="cart-badge" aria-hidden="true">0</span>
+        </div>
+    </header>
+
+    <!-- estrutura dos card 
+    Ajuste 1: Remocao da classe card( coloquei dentro do js) 
+    -->
+    <main id="produto-card"></main>
+    <!-- estrutura do rodape -->
+     
+
+    <div id="modal" class="modal" aria-hidden="true">
+      <div class="modal-overlay" data-close="true"></div>
+      <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" aria-label="Fechar">&times;</button>
+        <h2 id="modal-title">Confirmar compra</h2>
+        <p id="modal-desc"></p>
+        <div class="modal-actions">
+          <button id="confirm-buy" class="btn primary">Confirmar</button>
+          <button id="cancel-buy" class="btn">Cancelar</button>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">Todos direitos reservados</footer>
+   
+    <script src="script.js"></script>
+    
+</body>
+</html>
