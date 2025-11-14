@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graficos de venda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header-graficos" style="display: flex;">
+    <h1 style="text-align: center;">Gráfico de vendas</h1>
+    <button id="voltar-btn" class="btn" >Voltar</button>
+   
+   
+    </header>
+    <div class="grafico">
+        <h2> Produtos Colombo</h2>
+        <canvas id="myChart03"></canvas>
+    </div>
+    <div class="grafico">
+        <h2> Produtos Chanel</h2>
+        <canvas id="myChart02"></canvas>
+    </div>
+    <footer class="footer">Todos direitos reservados</footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+           const voltararrow = document.getElementById('voltar-btn');
+       if (voltararrow) {
+    voltararrow.addEventListener('click', () => {
+      window.location.href = 'index.html';
+    });
+  }
+        
+        const ctx = document.getElementById('myChart01');
+        const voto = 12;
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange', "Cyan", "Magenta"],
+            datasets: [{
+                label: '# of Votes',
+                data: [voto, 19, 3, 5, 2, 3, 5, 7],
+                borderWidth: 1
+            }]
+            },
+            options: {
+            scales: {
+                y: {
+                beginAtZero: true
+                }
+            }
+            }
+        });
+        const ctx2 = document.getElementById('myChart02');
+        new Chart(ctx2, {
+            type: 'bar',
+            data: {
+            labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', "Julho", "Agosto"],
+            datasets: [{
+                label: '# of Votes',
+                data: [voto, 19, 3, 5, 2, 3, 5, 7],
+                borderWidth: 1
+            }]
+            },
+            options: {
+            scales: {
+                y: {
+                beginAtZero: true
+                }
+            }
+            }
+        });
+        const ctx3 = document.getElementById('myChart03');
+        new Chart(ctx3, {
+            type: 'pie',
+            data: {
+            labels: ['sofás', 'Camas', 'Geladeiras', '', 'Frigobar', 'Fogão', "armários", ""],
+            datasets: [{
+                label: '# of Votes',
+                data: [voto, 19, 3, 5, 2, 3, 5, 7],
+                borderWidth: 1
+            }]
+            },
+            options: {
+            scales: {
+                y: {
+                beginAtZero: true
+                }
+            }
+            }
+        });
+        const ctx4 = document.getElementById('myChart04');
+        new Chart(ctx4, {
+            type: 'doughnut',
+            data: {
+            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange', "Cyan", "Magenta"],
+            datasets: [{
+                label: '# of Votes',
+                data: [voto, 19, 3, 5, 2, 3, 5, 7],
+                borderWidth: 1
+            }]
+            },
+            options: {
+            scales: {
+                y: {
+                beginAtZero: true
+                }
+            }
+            }
+        });
+        const ctx5 = document.getElementById('myChart05');
+        new Chart(ctx5, {       
+            type: 'radar',
+            data: {
+            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange', "Cyan", "Magenta"],
+            datasets: [{
+                label: '# of Votes',
+                data: [voto, 19, 3, 5, 2, 3, 5, 7],
+                borderWidth: 1
+            }]
+            },
+            options: {
+            scales: {
+                y: {
+                beginAtZero: true
+                }
+            }
+            }
+        });
+        const ctx6 = document.getElementById('myChart06');
+        new Chart(ctx6, {
+            type: 'polarArea',
+            data: {
+            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange', "Cyan", "Magenta"],
+            datasets: [{
+                label: '# of Votes',
+                data: [voto, 19, 3, 5, 2, 3, 5, 7],
+                borderWidth: 1
+            }]
+            },
+            options: {
+            scales: {
+                y: {
+                beginAtZero: true
+                }
+            }
+            }
+        });
+     
+    </script>
+
+</body>
+</html>

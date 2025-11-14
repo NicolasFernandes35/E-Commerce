@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Finalizar Compra</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+      <!-- Make sure you put this AFTER Leaflet's CSS -->
+   <style>
+    .footer{
+  text-align: center;
+  line-height: 10vh;
+  bottom: 0px;
+  width: 100%;
+  height: 10vh;
+  background: #6D28D9;    
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+}
+ #map { height: 300px; 
+               width: 50%;
+        }
+   </style>
+</head>
+<body>
+  <header class="header">
+    <span id="voltar-arrow" class="material-symbols-outlined icon">arrow_back</span>
+    <h1 style="color:white; margin:0; padding:0 12px; font-size:1.1rem;">Resumo do pedido</h1>
+    <div style="width:48px"></div>
+  </header>
+
+  <main style="width:100%; max-width:1100px; margin: 120px auto 80px; padding: 16px;">
+    <section id="compra-list"></section>
+
+    <div id="compra-summary" style="margin-top:18px; text-align:right;">
+      <strong>Total: R$ <span id="total-amount">0.00</span></strong>
+    </div>
+
+    <!-- geolocation & qr output -->
+    <div id="geo-info" style="margin-top:12px; text-align:left; color:#333;"></div>
+    <div id="qr-code" style="margin-top:12px; display:flex; gap:12px; justify-content:center; align-items:center;"></div>
+
+    <div style="margin-top:18px; display:flex; gap:8px; justify-content:flex-end;">
+      <button id="voltar-btn" class="btn">Voltar</button>
+      <button id="encerrar-btn" class="btn primary">Encerrar compra</button>
+      <button id="grafico-btn" class="btn-grafic">Consultar gráficos de vendas</button>
+    </div>
+  </main>
+  <h1>Localização para frete</h1>
+    <h2></h2>
+    <center>
+    <div id="map"></div>
+    <script src="script02.js"></script>
+    </center>
+
+  <footer class="footer-compra">Todos direitos reservados</footer>
+
+  <script src="compra.js"></script>
+   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+</body>
+</html>
